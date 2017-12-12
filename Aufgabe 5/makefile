@@ -1,4 +1,4 @@
-flagtest:	main.o asm.o
+flagtest: main.o asm.o
 	gcc -m32 -o flagtest main.o asm.o
 
 main.o:	main.c
