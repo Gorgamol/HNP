@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 		return -1;
 	}
 
-	short op1	= atoi(argv[1]);
+	short op1 = atoi(argv[1]);
 	short op2 = atoi(argv[2]);
 	short result = 0;
 	unsigned short flags = addsub(op1, op2, what, &result);
