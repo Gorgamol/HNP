@@ -11,7 +11,7 @@ addsub:
 	mov eax, [ebp+4]	; opt1 vom Stack in eax
 	mov ebx, [ebp+12]	; what (+/-) vom Stack in ebx
 	cmp ebx, sub		; Prüfe ob Subtraktion
-	je subtraktion	;	Springe zu subtraktion, wenn gleich (jump equal)
+	je subtraktion		; Springe zu subtraktion, wenn gleich (jump equal)
 
 	add ax, [ebp+8]		; opt1 + opt2 (16 bit addition)
 	jmp return		; Überpringe subtraktion
