@@ -51,7 +51,7 @@ int main(int argc, char** argv) {
 
 	printf("\nErgebnis und Operanden Unsigned");
 	printf("%d %c %d = %d", (unsigned short) op1, (unsigned short) op2, *argv[2], (unsigned short) result);
-	if(flagArray[0] == 0) {	//carry flag gesetzt? Ja = falsch, Nein = richtig
+	if(flagArray[0] == 0) {		//carry flag gesetzt? Ja = falsch, Nein = richtig
 		printf(" (Ergebnis ist richtig!)");
 	} else {
 		printf(" (Ergebnis ist falsch!)");
