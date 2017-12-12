@@ -8,16 +8,16 @@ addsub:
 	push ebp		; Stackframe => Basepointer sichern
 	mov ebp, esp		; Basepointer = Stackpointer (ebp als fester ankerpunkt für übergebene funktionsargumente)
 
-	mov eax, [ebp+4]	; opt1 vom Stack in eax
+	mov eax, [ebp+4]	; op1 vom Stack in eax
 	mov ebx, [ebp+12]	; what (+/-) vom Stack in ebx
 	cmp ebx, sub		; Prüfe ob Subtraktion
 	je subtraktion		; Springe zu subtraktion, wenn gleich (jump equal)
 
-	add ax, [ebp+8]		; opt1 + opt2 (16 bit addition)
+	add ax, [ebp+8]		; op1 + op2 (16 bit addition)
 	jmp return		; Überpringe subtraktion
 
 subtraktion:
-	sub ax, [ebp+8]		; opt1 + opt2 (16 bit subtraktion)
+	sub ax, [ebp+8]		; op1 + op2 (16 bit subtraktion)
 
 return:
 	mov ebx, [ebp+16]	; Adresse von übergabeparameter ergebnis in ebx
