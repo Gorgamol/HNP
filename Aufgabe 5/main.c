@@ -41,20 +41,20 @@ int main(int argc, char** argv) {
 		printf("%d ", flagArray[i]);
 	}
 
-	printf("\nErgebnis und Operanden Signed");
+	printf("\nErgebnis und Operanden Signed:");
 	printf("%d %c %d = %d", op1, op2, *argv[2], result);
 	if(flagArray[11] == 0) {	//overflow flag gesetzt? Ja = falsch, Nein = richtig
-		printf(" (Ergebnis ist richtig!)");
+		printf(" (Ergebnis ist richtig!)\n");
 	} else {
-		printf(" (Ergebnis ist falsch!)");
+		printf(" (Ergebnis ist falsch!)\n");
 	}
 
-	printf("\nErgebnis und Operanden Unsigned");
+	printf("\nErgebnis und Operanden Unsigned:");
 	printf("%d %c %d = %d", (unsigned short) op1, (unsigned short) op2, *argv[2], (unsigned short) result);
 	if(flagArray[0] == 0) {		//carry flag gesetzt? Ja = falsch, Nein = richtig
-		printf(" (Ergebnis ist richtig!)");
+		printf(" (Ergebnis ist richtig!)\n");
 	} else {
-		printf(" (Ergebnis ist falsch!)");
+		printf(" (Ergebnis ist falsch!)\n");
 	}
 
 	return 0;
