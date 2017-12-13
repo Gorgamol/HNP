@@ -110,7 +110,7 @@ Anschließend wird die ASM Subroutine mit `ret` verlassen und der Stack wird zur
 	short result = 0;
 	unsigned short flags = addsub(op1, op2, what, &result);
 ```
-Das Ergebnis der Rechnung wurde über den Pointer in die `result` variable geschrieben. `flags` bekommt über das EAX Register aus der ASM Subroutine den Status der Flags zugewiesen (16 Bit). Um die einzelnen Flags zu verarbeiten wird eine Schleife verwendet, welche bei jedem durchlauf (16 durchläufe) den Wert (entweder 1 oder 0) von `flags % 2` an die jeweils nächste freie Stelle eines 16 Stellen großen Arrays geschrieben. Für die Aufgabe sind nur folgende Flags relevant:
+Das Ergebnis der Rechnung wurde über den Pointer in die `result` variable geschrieben. `flags` bekommt über das EAX Register aus der ASM Subroutine den Status der Flags zugewiesen (16 Bit). Um die einzelnen Flags zu verarbeiten wird eine Schleife verwendet, welche bei jedem durchlauf (16 durchläufe) den Wert (entweder 1 oder 0) von `flags % 2` an die jeweils nächste freie Stelle eines 16 Stellen großen Arrays schreibt. Für die Aufgabe sind nur folgende Flags relevant:
 ```
 Flagreihenfolge im SBC-86
 
