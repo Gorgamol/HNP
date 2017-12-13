@@ -30,22 +30,22 @@ Pseudocode Parameter auf den Stack schieben:
 Grobe veranschaulichung vom Stack
 ```
 +-------------+    
-| return Addr | <-- Stackpointer (esp) wandert mit wachsendem stack, Basepointer (ebp) fest verankert
+| return Addr | <-- Stackpointer (esp) wandert mit wachsendem stack
 +-------------+ 
-| op1         | <-- [ebp + 4] = erster operand
+| op1         |
 +-------------+    
-| op2         | <-- [ebp + 8] = zweiter operand
+| op2         |
 +-------------+    
-| what        | <-- [ebp + 12] = rechenoperation
+| what        |
 +-------------+    
-| &result     | <-- [ebp + 16] = rückgabe über adresse von ergebnis variable 
+| &result     |
 +-------------+
 
 
 +-------------+
-| saved ebp   | <-- Stackpointer verschoben, nach push ebp 
+| saved ebp   | <-- Stackpointer verschoben, nach 'push ebp' / dann Base Pointer (ebp) = Stackpointer (jetzt verankert) 
 +-------------+    
-| return Addr | <-- Basepointer (ebp) fest veranktert
+| return Addr | 
 +-------------+ 
 | op1         | <-- [ebp + 4] = erster operand
 +-------------+    
@@ -60,9 +60,9 @@ Grobe veranschaulichung vom Stack
 +-------------+
 | flags       | <-- Stackpointer erneut verschoben, nach pushfd
 +-------------+
-| saved ebp   |  
+| saved ebp   | <-- Basepointer (ebp) fest verankert
 +-------------+    
-| return Addr | <-- Basepointer (ebp) fest verankert
+| return Addr | 
 +-------------+ 
 | op1         | <-- [ebp + 4] = erster operand
 +-------------+    
@@ -75,9 +75,9 @@ Grobe veranschaulichung vom Stack
 ```
 ```
 +-------------+
-| saved ebp   | <-- pop 32, holt die flags vom stack und verschiebt Stackpointer zurück
+| saved ebp   | <-- pop 32, holt die flags vom stack und verschiebt Stackpointer zurück / Basepointer (ebp) fest verankert
 +-------------+    
-| return Addr | <-- Basepointer (ebp) fest verankert
+| return Addr | 
 +-------------+ 
 | op1         | <-- [ebp + 4] = erster operand
 +-------------+    
