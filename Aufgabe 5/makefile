@@ -7,5 +7,5 @@ main.o: main.c
 		gcc -m32 -c -o main.o main.c
 
 #ASM Modul kompilieren
-asm.o: calc.asm
+asm.o: addsub.asm
 		nasm -f elf -o asm.o addsub.asm
