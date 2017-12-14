@@ -47,13 +47,13 @@ Grobe veranschaulichung vom Stack
 +-------------+    
 | return Addr | 
 +-------------+ 
-| op1         | <-- [ebp + 4] = erster operand
+| op1         | <-- [ebp + 8] = erster operand
 +-------------+    
-| op2         | <-- [ebp + 8] = zweiter operand
+| op2         | <-- [ebp + 12] = zweiter operand
 +-------------+    
-| what        | <-- [ebp + 12] = rechenoperation
+| what        | <-- [ebp + 16] = rechenoperation
 +-------------+    
-| &result     | <-- [ebp + 16] = rückgabe über adresse von ergebnis variable 
+| &result     | <-- [ebp + 20] = rückgabe über adresse von ergebnis variable 
 +-------------+
 
 
@@ -64,13 +64,13 @@ Grobe veranschaulichung vom Stack
 +-------------+    
 | return Addr | 
 +-------------+ 
-| op1         | <-- [ebp + 4] = erster operand
+| op1         | <-- [ebp + 8] = erster operand
 +-------------+    
-| op2         | <-- [ebp + 8] = zweiter operand
+| op2         | <-- [ebp + 12] = zweiter operand
 +-------------+    
-| what        | <-- [ebp + 12] = rechenoperation
+| what        | <-- [ebp + 16] = rechenoperation
 +-------------+    
-| &result     | <-- [ebp + 16] = rückgabe über adresse von ergebnis variable 
+| &result     | <-- [ebp + 20] = rückgabe über adresse von ergebnis variable 
 +-------------+
 ```
 ```
@@ -79,13 +79,13 @@ Grobe veranschaulichung vom Stack
 +-------------+    
 | return Addr | 
 +-------------+ 
-| op1         | <-- [ebp + 4] = erster operand
+| op1         | <-- [ebp + 8] = erster operand
 +-------------+    
-| op2         | <-- [ebp + 8] = zweiter operand
+| op2         | <-- [ebp + 12] = zweiter operand
 +-------------+    
-| what        | <-- [ebp + 12] = rechenoperation
+| what        | <-- [ebp + 16] = rechenoperation
 +-------------+    
-| &result     | <-- [ebp + 16] = rückgabe über adresse von ergebnis variable 
+| &result     | <-- [ebp + 20] = rückgabe über adresse von ergebnis variable 
 +-------------+
 
 
