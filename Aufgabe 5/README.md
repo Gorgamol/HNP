@@ -129,5 +129,5 @@ A = Auxilliary Flag
 P = Parity Flag
 C = Carry Flag
 ```
-Die Flags werden von rechts nach links im Array abgelegt. `flagArray[0]` ist also das erste Flag in unserem Array. Da wir außer dem Carry Flag nur das Overflow Flag benötigen, ist außerdem `flagArray[11]` relevant. Nun können wir ganz einfach verifizieren ob unser Ergebnis richtig ist. Wenn ein signed Ergebnis mit signed Operanden falsch ist bzw nach der 16 Bit Addition/Subtraktion aus dem Wertebereich läuft, dann ist das OverflowFlag = 1. Wenn ein unsigned Ergebnis mit unsigned Operanden falsch ist bzw nach der 16 Bit Addition/Subtraktion einen Übetrag hat, dann ist das CarryFlag = 1.
+Die Flags werden von links nach rechts im Array abgelegt. `flagArray[0]` ist also das Carry Flag in unserem Array. Da wir außer dem Carry Flag nur das Overflow Flag benötigen, ist außerdem `flagArray[11]` relevant. Nun können wir ganz einfach verifizieren ob unser Ergebnis richtig ist. Wenn ein signed Ergebnis mit signed Operanden falsch ist bzw nach der 16 Bit Addition/Subtraktion aus dem Wertebereich läuft, dann ist das OverflowFlag = 1. Wenn ein unsigned Ergebnis mit unsigned Operanden falsch ist bzw nach der 16 Bit Addition/Subtraktion einen Übetrag hat, dann ist das CarryFlag = 1.
 
