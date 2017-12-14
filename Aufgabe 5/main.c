@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
 	short op1 = atoi(argv[1]);
 	short op2 = atoi(argv[3]);
 	short result = 0;
-	unsigned short flags = addsub(op1, op2, what, &result);
+	unsigned short flags = addsub(op1, op2, what, (int*) &result);
 	int flagArray[16];
 	int i;
 
